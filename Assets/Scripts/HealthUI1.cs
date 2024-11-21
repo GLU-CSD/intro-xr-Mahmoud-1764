@@ -44,7 +44,7 @@ public class HealthUI1 : MonoBehaviour
     {
         if (healthScript != null)
         {
-            healthScript.RestoreHealth(10);
+            healthScript.RestoreHealth(10); 
         }
     }
 
