@@ -8,7 +8,7 @@ public class MushroomLightTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             mushroomlight.enabled = true;
             Debug.Log("licht aan");

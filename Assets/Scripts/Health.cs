@@ -19,9 +19,9 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Hier kun je andere updates toevoegen als dat nodig is
     }
-    
+
     void UpdateHealthBar()
     {
         healthbarfill.fillAmount = currentHealth / maxHealth;
@@ -30,8 +30,12 @@ public class Health : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0,maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthBar();
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void RestoreHealth(float amount)
